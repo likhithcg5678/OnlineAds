@@ -39,3 +39,6 @@ namespace OnlineAdsManagementSystem.Models
         public virtual ICollection<Interest> Interests { get; set; }
     }
 }
+
+
+// just adding comment for git verification
