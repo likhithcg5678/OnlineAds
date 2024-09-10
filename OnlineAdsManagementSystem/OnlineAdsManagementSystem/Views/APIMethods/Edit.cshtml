@@ -1,0 +1,400 @@
+﻿@model OnlineAdsManagementSystem.Models.NewViewMyAds
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+
+
+@{
+    if (ViewContext.HttpContext.Session.GetString("UserSession") != null)
+    {
+        <div class="col d-flex justify-content-center m-3 ">
+            <div class="card bg-dark" style="width: 38rem; height:auto ;">
+                <br />
+                <h1 class="text-white  col d-flex justify-content-center">Edit Your Ad Details</h1>
+
+                <div class="card-body text-white ">
+
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-6">
+                            <form asp-action="Edit">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="adId" />
+                                <div class="form-group">
+                                    <label asp-for="userId" class="control-label">User ID</label>
+                                    <input asp-for="userId" class="form-control" readonly />
+                                    <span asp-validation-for="userId" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="mCname" class="control-label">Main Category</label>
+                                    <select asp-for="mCname" class="form-control" id="mainCategory">
+                                        <option value="">Choose MainCategory</option>
+                                        @foreach (var item in ViewBag.MainCategories)
+                                        {
+                                            <option value="@item.Text" data-group="@item.Group.Name">@item.Text</option>
+                                        }
+                                    </select>
+                                    <span asp-validation-for="mCname" class="text-danger"></span>
+                                </div>
+                                
+
+                                <div class="form-group">
+                                    <label asp-for="sCname" class="control-label">Sub Category</label>
+                                    <select asp-for="sCname" class="form-control" id="subCategory">
+                                        <option value="">Choose SubCategory</option>
+                                        @foreach (var item in ViewBag.SubCategories)
+                                        {
+                                            <option value="@item.Text" data-group="@item.Group.Name">@item.Text</option>
+                                        }
+                                    </select>
+                                    <span asp-validation-for="sCname" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="adTitle" class="control-label">Ad Title</label>
+                                    <input asp-for="adTitle" class="form-control" />
+                                    <span asp-validation-for="adTitle" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="adDescription" class="control-label">Ad Description</label>
+                                    <input asp-for="adDescription" class="form-control" />
+                                    <span asp-validation-for="adDescription" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="contactName" class="control-label">Contact Name</label>
+                                    <input asp-for="contactName" class="form-control" />
+                                    <span asp-validation-for="contactName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="contactEmail" class="control-label">Contact Email</label>
+                                    <input asp-for="contactEmail" class="form-control" />
+                                    <span asp-validation-for="contactEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="phoneNumber" class="control-label">Phone Number</label>
+                                    <input asp-for="phoneNumber" class="form-control" />
+                                    <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label asp-for="status" class="control-label">Status</label>
+                                    <select name="status" asp-items="ViewBag.Status" class="form-control">
+                                        <option value="">Set Status</option>
+                                    </select>
+                                    <span asp-validation-for="status" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+            <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+                  text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+               asp-controller="Home" asp-action="UserDashboard">
+                Back to Dashboard
+            </a>
+        </div>
+
+    }
+
+
+    if (ViewContext.HttpContext.Session.GetString("AdminSession") != null)
+    {
+        <div class="col d-flex justify-content-center m-3 mt-5 ">
+            <div class="card bg-dark" style="width: 38rem; height:auto ;">
+                <br />
+                <h1 class="text-white  col d-flex justify-content-center">Edit Ad Details</h1>
+
+                <div class="card-body text-white ">
+
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-6">
+                            <form asp-action="Edit">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="adId" />
+                                <div class="form-group">
+                                    <label asp-for="userId" class="control-label">User ID</label>
+                                    <input asp-for="userId" class="form-control" readonly />
+                                    <span asp-validation-for="userId" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="mCname" class="control-label">Main Category </label>
+                                    <input asp-for="mCname" class="form-control" readonly />
+                                    <span asp-validation-for="mCname" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="sCname" class="control-label">Sub Category</label>
+                                    <input asp-for="sCname" class="form-control" readonly />
+                                    <span asp-validation-for="sCname" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="adTitle" class="control-label">Ad Title</label>
+                                    <input asp-for="adTitle" class="form-control" readonly />
+                                    <span asp-validation-for="adTitle" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="adDescription" class="control-label">Ad Description</label>
+                                    <input asp-for="adDescription" class="form-control" readonly />
+                                    <span asp-validation-for="adDescription" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="contactName" class="control-label">Contact Name</label>
+                                    <input asp-for="contactName" class="form-control" readonly />
+                                    <span asp-validation-for="contactName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="contactEmail" class="control-label">Contact Email</label>
+                                    <input asp-for="contactEmail" class="form-control" readonly />
+                                    <span asp-validation-for="contactEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="phoneNumber" class="control-label">Phone Number</label>
+                                    <input asp-for="phoneNumber" class="form-control" readonly />
+                                    <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                                </div>
+                                @*<div class="form-group">
+                        <label asp-for="status" class="control-label"></label>
+                        <input asp-for="status" class="form-control" />
+                        <span asp-validation-for="status" class="text-danger"></span>
+                        </div>*@
+                                <div class="form-group">
+                                    <label asp-for="status" class="control-label">Status</label>
+                                    <select name="status" asp-items="ViewBag.ForAdminStatus" class="form-control">
+                                        <option value="">Set Status</option>
+                                    </select>
+                                    <span asp-validation-for="status" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Save" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+            <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+                      text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+               asp-controller="Home" asp-action="AdminDashboard">
+                Back to Dashboard
+            </a>
+        </div>
+    }
+
+
+
+
+}
+
+
+
+
+
+@* 
+@{
+    if (ViewContext.HttpContext.Session.GetString("UserSession")!=null){
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="adId" />
+                    <div class="form-group">
+                        <label asp-for="userId" class="control-label"></label>
+                        <input asp-for="userId" class="form-control" readonly />
+                        <span asp-validation-for="userId" class="text-danger"></span>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label asp-for="mCname" class="control-label"></label>
+                        <select asp-for="mCname" class="form-control" id="mainCategory">
+                            <option value="">Choose MainCategory</option>
+                            @foreach (var item in ViewBag.MainCategories)
+                            {
+                                <option value="@item.Text" data-group="@item.Group.Name">@item.Text</option>
+                            }
+                        </select>
+                        <span asp-validation-for="mCname" class="text-danger"></span>
+                    </div>
+                  
+
+                    <div class="form-group">
+                        <label asp-for="sCname" class="control-label"></label>
+                        <select asp-for="sCname" class="form-control" id="subCategory">
+                            <option value="">Choose SubCategory</option>
+                            @foreach (var item in ViewBag.SubCategories)
+                            {
+                                <option value="@item.Text" data-group="@item.Group.Name">@item.Text</option>
+                            }
+                        </select>
+                        <span asp-validation-for="sCname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="adTitle" class="control-label"></label>
+                        <input asp-for="adTitle" class="form-control" />
+                        <span asp-validation-for="adTitle" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="adDescription" class="control-label"></label>
+                        <input asp-for="adDescription" class="form-control" />
+                        <span asp-validation-for="adDescription" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="contactName" class="control-label"></label>
+                        <input asp-for="contactName" class="form-control" />
+                        <span asp-validation-for="contactName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="contactEmail" class="control-label"></label>
+                        <input asp-for="contactEmail" class="form-control" />
+                        <span asp-validation-for="contactEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="phoneNumber" class="control-label"></label>
+                        <input asp-for="phoneNumber" class="form-control" />
+                        <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="status" class="control-label"></label>
+                        <select name="status" asp-items="ViewBag.Status" class="form-control">
+                            <option value="">Set Status</option>
+                        </select>
+                        <span asp-validation-for="status" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+
+
+
+    if (ViewContext.HttpContext.Session.GetString("AdminSession")!=null){
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="adId" />
+                    <div class="form-group">
+                        <label asp-for="userId" class="control-label"></label>
+                        <input asp-for="userId" class="form-control" readonly />
+                        <span asp-validation-for="userId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="mCname" class="control-label"></label>
+                        <input asp-for="mCname" class="form-control" readonly />
+                        <span asp-validation-for="mCname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="sCname" class="control-label"></label>
+                        <input asp-for="sCname" class="form-control" readonly/>
+                        <span asp-validation-for="sCname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="adTitle" class="control-label"></label>
+                        <input asp-for="adTitle" class="form-control" readonly/>
+                        <span asp-validation-for="adTitle" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="adDescription" class="control-label"></label>
+                        <input asp-for="adDescription" class="form-control" readonly />
+                        <span asp-validation-for="adDescription" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="contactName" class="control-label"></label>
+                        <input asp-for="contactName" class="form-control" readonly />
+                        <span asp-validation-for="contactName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="contactEmail" class="control-label"></label>
+                        <input asp-for="contactEmail" class="form-control" readonly/>
+                        <span asp-validation-for="contactEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="phoneNumber" class="control-label"></label>
+                        <input asp-for="phoneNumber" class="form-control" readonly />
+                        <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label asp-for="status" class="control-label"></label>
+                        <select name="status" asp-items="ViewBag.ForAdminStatus" class="form-control">
+                            <option value="">Set Status</option>
+                        </select>
+                        <span asp-validation-for="status" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+}
+
+
+<div>
+    <a  asp-controller="Home" asp-action="UserDashboard">Back to Dashboard</a>
+</div> *@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Removed integrity attribute -->
+    <script>
+        $(document).ready(function () {
+            $('#mainCategory').change(function () {
+                var mainCategoryId = $('#mainCategory option:selected').data('group');
+                console.log("Selected mainCategoryId:", mainCategoryId); // Logging the selected mainCategoryId
+
+                $.ajax({
+                    url: '@Url.Action("GetSubCategories", "APIMethods")',
+                    type: 'GET',
+                    data: { mcid: mainCategoryId },
+                    success: function (data) {
+                        console.log("Received data:", data); // Logging the received data
+
+                        var subCategoryDropdown = $('#subCategory');
+                        subCategoryDropdown.empty();
+                        subCategoryDropdown.append('<option value="">Choose SubCategory</option>');
+                        $.each(data, function (index, item) {
+                            subCategoryDropdown.append('<option value="' + item.value + '" data-group="' + item.group.name + '">' + item.text + '</option>');
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Error fetching subcategories:', error);
+                    }
+                });
+            });
+        });
+    </script>
+}

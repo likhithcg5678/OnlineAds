@@ -1,0 +1,71 @@
+﻿@model OnlineAdsManagementSystem.Models.NewViewAllAds
+
+@{
+    ViewData["Title"] = "SearchAdsBasedOnCategory";
+}
+
+<h1>SearchAdsBasedOnMainCategory</h1>
+
+@* <h4>NewViewAllAds</h4> *@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SearchAdsBasedOnCategory" method="get">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @* <div class="form-group">
+                <label asp-for="userId" class="control-label"></label>
+                <input asp-for="userId" class="form-control" />
+                <span asp-validation-for="userId" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+@*                 <label asp-for="mCname" class="control-label"></label>
+ *@                <label for="mCname" class="control-label"></label>
+                <input type="text" name="category" class="form-control" />
+@*                 <span asp-validation-for="mCname" class="text-danger"></span>
+ *@            </div>
+           @*  <div class="form-group">
+                <label asp-for="sCname" class="control-label"></label>
+                <input asp-for="sCname" class="form-control" />
+                <span asp-validation-for="sCname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="adTitle" class="control-label"></label>
+                <input asp-for="adTitle" class="form-control" />
+                <span asp-validation-for="adTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="adDescription" class="control-label"></label>
+                <input asp-for="adDescription" class="form-control" />
+                <span asp-validation-for="adDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="contactName" class="control-label"></label>
+                <input asp-for="contactName" class="form-control" />
+                <span asp-validation-for="contactName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="contactEmail" class="control-label"></label>
+                <input asp-for="contactEmail" class="form-control" />
+                <span asp-validation-for="contactEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="phoneNumber" class="control-label"></label>
+                <input asp-for="phoneNumber" class="form-control" />
+                <span asp-validation-for="phoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <input asp-for="status" class="form-control" />
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

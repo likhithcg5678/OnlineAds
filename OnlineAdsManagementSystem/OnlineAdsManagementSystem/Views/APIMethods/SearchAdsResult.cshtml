@@ -1,0 +1,160 @@
+﻿@model IEnumerable<OnlineAdsManagementSystem.Models.NewViewAllAds>
+
+@{
+    ViewData["Title"] = "SearchAdsResult";
+}
+
+
+
+
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="card bg-dark mt-5" style="width: 55rem; height: auto;">
+        <h1 class="col d-flex justify-content-center m-3 text-white">Search Results</h1>
+
+        <div class=" col d-block justify-content-center border-5 border-dark">
+            @if (Model == null || !Model.Any())
+            {
+                <h5 style=" text-align:center; color:white">No Ads In The System</h5>
+            }
+            @foreach (var item in Model)
+            {
+                <div class="col d-flex justify-content-center m-3 ">
+                    <div class="card" style="width: 38rem; height:auto">
+
+
+                        <div class="card-body">
+
+                            <a href="~/images/@Html.DisplayFor(modelItem => item.ImageUrl)" target="_blank" class="col d-flex justify-content-center">
+                                <img src="~/images/@Html.DisplayFor(modelItem => item.ImageUrl)" alt="User has not added the image" class="card-img-top img-fluid" style="max-width: 35%; max-height: 300px;" />
+                            </a>
+
+                            <h5 class="card-title mt-3 text-center">
+                                @Html.DisplayFor(modelItem => item.adTitle)
+                            </h5>
+
+
+
+
+                            <div class="col d-flex flex-column align-items-center">
+                                <p class="card-text ">
+                                    <span style="color:black; font-weight:600; ">Ad ID</span> : @Html.DisplayFor(modelItem => item.adId)
+                                    <br />
+                                    <span style="color:black; font-weight:600; ">Ad Description</span>: @Html.DisplayFor(modelItem => item.adDescription)
+                                    <br />
+                                    <span style="color:black; font-weight:600; ">Contact Name</span>: @Html.DisplayFor(modelItem => item.contactName)
+                                    <br />
+                                    <span style="color:black; font-weight:600; ">Contact Email</span>: @Html.DisplayFor(modelItem => item.contactEmail)
+                                    <br />
+                                    <span style="color:black; font-weight:600; ">Phone Number</span>: @Html.DisplayFor(modelItem => item.phoneNumber)
+                                    <br />
+                                    <span style="color:black; font-weight:600; ">Status</span>: @Html.DisplayFor(modelItem => item.status)
+                                    <br />
+                                    <a asp-action="Edit" asp-route-id="@item.adId">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.adId">Details</a>
+
+                                    @*<a asp-action="ViewUserDetails" asp-route-userid="@item.userId">User Details</a>*@
+                                </p>
+
+
+
+
+                                <a asp-action="ViewUserDetails" asp-route-userid="@item.userId" class="btn btn-primary btn-sm w-20 mb-2">Ad Poster Details</a>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<br>
+<div>
+    <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+                  text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+       asp-controller="Home" asp-action="AdminDashboard">
+        Back to Dashboard
+    </a>
+</div>
+
+
+@* 
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.userId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mCname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sCname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.contactName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.contactEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.userId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mCname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sCname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contactName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contactEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.adId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.adId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.adId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@

@@ -1,0 +1,139 @@
+
+@{
+    ViewData["Title"] = "UserDashboard";
+}
+
+@{
+    var gotuserid = TempData["Passuserid"];
+    var UserIdForFullSession = ViewBag.MySession;
+}
+
+
+
+<div class="m-5 ">
+    <div class="col d-flex justify-content-center">
+        <div class="card m-4" style="width: 25rem; align-items:center; display:flex; text-align:center">
+            <div class="card-body">
+                <h1 class="card-title">User Dashboard </h1>
+                <br />
+                <h3 class="card-subtitle mb-2 text-muted">Welcome @ViewBag.Try.<pre class="card-subtitle">Your User ID:@ViewBag.MySession</pre> </h3>
+
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="col d-flex justify-content-center">
+
+        <a href="/APIMethods/ViewAllAds" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 355px;">
+                <img class="card-img-top" src="~/images/global-6635477_1280.png" alt="Card image cap">
+                
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">View All Ads</h4>
+                    <p class="card-text">Want to Buy Something? Click on this Card to View All Ads In the System</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/APIMethods/PostYourAd" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 355px;">
+                <img class="card-img-top" src="~/images/smartphone-8930867_1280.jpg" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">Post Your Ads</h4>
+                    <p class="card-text">Looks Like You Have Got Something To Sell. Sell your Products Online. Grow Your Business</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/APIMethods/ViewMyAds?userid=@gotuserid" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 355px;">
+                <img class="card-img-top" src="~/images/business-7136952_1280.png" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">View My Ads</h4>
+                    <p class="card-text"> Track Your Products. See What You Have Got For Yor Customers. </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/APIMethods/ViewMyInterests?userid=@gotuserid" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 355px;">
+                <img style="height:225px" class="card-img-top" src="~/images/cat-8239223_1280.png" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">View My Interests</h4>
+                    <p class="card-text">You Deserve What You Want. See What You Are Interested in... We Will Get You What You Want</p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="col d-flex justify-content-center">
+        <a href="/APIMethods/SearchCategoryWise" class="text-decoration-none text-black">
+            <div class="card " style="width: 18rem; height:355px;">
+                <img style="height:225px" class="card-img-top" src="~/images/search-768328_1280.png" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">Search Ads</h4>
+                    <p class="card-text">Not Getting What You Are Looking For? We Have Made It Easy For You. Search Here.</p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    
+</div>
+
+
+
+
+
+<h3></h3>
+@* <br />
+<form asp-controller="APIMethods" asp-action="ViewAllAds" method="get">
+    <!-- You don't need to add any fields if you are just navigating -->
+    <button type="submit" class="btn btn-primary btn-lg">View All Ads</button>
+</form>
+<br /> *@
+
+@* <form asp-controller="APIMethods" asp-action="PostYourAd" method="get">
+    <!-- You don't need to add any fields if you are just navigating -->
+    <button type="submit" class="btn btn-primary btn-lg">Post Your Ad</button>
+</form>
+<br /> *@
+
+
+@* <form asp-controller="APIMethods" asp-action="ViewMyAds" method="get">
+    <input type="hidden" name="userid" value="@gotuserid" /> 
+    <button type="submit" class="btn btn-primary btn-lg">View My Ads</button>
+</form>
+<br />
+
+
+
+<form asp-controller="APIMethods" asp-action="ViewMyInterests" method="get">
+    <input type="hidden" name="userid" value="@gotuserid" /> 
+    <button type="submit" class="btn btn-primary btn-lg">View My Interests</button>
+</form>
+<br /> *@
+
+@* <form asp-controller="APIMethods" asp-action="SearchAdsBasedOnCategory" method="get">    
+    <button type="submit" class="btn btn-primary btn-lg">Search ads Based<br /> on  Categories</button>
+</form>
+<br /> *@
+
+@* <form asp-controller="APIMethods" asp-action="SearchCategoryWise" method="get">
+    <button type="submit" class="btn btn-primary btn-lg">Search ads Based<br /> on  Categories</button>
+</form>
+<br /> *@
+
+
+
+<form asp-controller="Home" asp-action="Logout" method="post">
+    <button type="submit" class="bg-danger btn-lg">Logout</button>
+</form>
+

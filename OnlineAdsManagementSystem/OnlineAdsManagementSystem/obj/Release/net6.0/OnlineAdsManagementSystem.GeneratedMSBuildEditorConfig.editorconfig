@@ -1,0 +1,167 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = OnlineAdsManagementSystem
+build_property.RootNamespace = OnlineAdsManagementSystem
+build_property.ProjectDir = C:\Users\likhi\OneDrive\Desktop\Online ads git\OnlineAdsManagementSystem\OnlineAdsManagementSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\likhi\OneDrive\Desktop\Online ads git\OnlineAdsManagementSystem\OnlineAdsManagementSystem
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/AddImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xBZGRJbWFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/AddNewMainCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xBZGROZXdNYWluQ2F0ZWdvcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/AddNewSubCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xBZGROZXdTdWJDYXRlZ29yaWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/DeleteMc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xEZWxldGVNYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/EditMainCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xFZGl0TWFpbkNhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/InterestWarning.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xJbnRlcmVzdFdhcm5pbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/PostYourAd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xQb3N0WW91ckFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/SearchAds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xTZWFyY2hBZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/SearchAdsBasedOnCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xTZWFyY2hBZHNCYXNlZE9uQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/SearchAdsResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xTZWFyY2hBZHNSZXN1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/SearchCategoryWise.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xTZWFyY2hDYXRlZ29yeVdpc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/SearchCategoryWiseList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xTZWFyY2hDYXRlZ29yeVdpc2VMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/SendInt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xTZW5kSW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/ShowInterestForMyAds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xTaG93SW50ZXJlc3RGb3JNeUFkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/UserDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xVc2VyRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/ViewAdsBasedOnCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xWaWV3QWRzQmFzZWRPbkNhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/ViewAllAds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xWaWV3QWxsQWRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/ViewMainCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xWaWV3TWFpbkNhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/ViewMyAds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xWaWV3TXlBZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/ViewMyInterests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xWaWV3TXlJbnRlcmVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/APIMethods/ViewUserDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQVBJTWV0aG9kc1xWaWV3VXNlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Home/AdminDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbkRhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Home/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Home/UserDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/likhi/OneDrive/Desktop/Online ads git/OnlineAdsManagementSystem/OnlineAdsManagementSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mulhcpitk6

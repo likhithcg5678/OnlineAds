@@ -1,0 +1,170 @@
+﻿@model OnlineAdsManagementSystem.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+
+<div class="image-container">
+    <img src="~/images/popupimages/flat-2126880_1280.png" class="throwing-image" alt="image1" />
+    <img src="~/images/popupimages/footwear-7055005_1280.png" class="throwing-image" alt="image2" />
+    <img src="~/images/popupimages/ford-mustang-146580_1280.png" class="throwing-image" alt="image3" />
+    <img src="~/images/popupimages/heart-5614865_1280.png" class="throwing-image" alt="image3" />
+    <img src="~/images/popupimages/like-2651767_1280.png" class="throwing-image" alt="image3" />
+
+    <img src="~/images/popupimages/mail-1454734_1280.png" class="throwing-image" alt="image3" />
+
+    <img src="~/images/popupimages/phone-2374915_1280.png" class="throwing-image" alt="image3" />
+    <img src="~/images/popupimages/Red-megaphone-is-advertising-selling-products-online-Clipart-PNG.png" class="throwing-image" alt="image3" />
+
+    <img src="~/images/popupimages/sweater-150533_1280.png" class="throwing-image" alt="image3" />
+
+    <img src="~/images/popupimages/sweater-150533_1280.png" class="throwing-image" alt="image3" />
+    <img src="~/images/popupimages/watch-42803_1280.png" class="throwing-image" alt="image3" />
+
+
+
+
+
+</div>
+
+<div class="container d-flex align-content-center justify-content-center m-5">
+    <div class="border border-danger border-5 p-4 rounded form-container">
+        <h1 class="text">Login</h1>
+        <hr />
+        <div class="row">
+            @{
+                if (ViewBag.Message != null)
+                {
+                    <p style="color:red; margin: 0;">@ViewBag.Message</p>
+                }
+            }
+            <form asp-action="Login">
+                <div asp-validation-summary="ModelOnly" class="text-danger" style="min-height: 1.5rem;"></div>
+
+                <div class="form-group">
+                    <label asp-for="UserType" class="control-label textboxdata"></label>
+                    <br />
+                    <select name="UserType" asp-items="ViewBag.Usertype" class="form-control">
+                        <option value="">Select UserType</option>
+                    </select>
+                    <span asp-validation-for="UserType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserId" class="control-label textboxdata"></label>
+                    <br />
+                    <input asp-for="UserId" class="form-control" />
+                    <span asp-validation-for="UserId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label textboxdata"></label>
+                    <br />
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-primary" />
+                </div>
+                <br />
+                <a asp-controller="Home" asp-action="Register" class="text-decoration-none">Not have an account? Register here</a>
+            </form>
+        </div>
+        <div>
+            <a asp-action="Index" class="text-decoration-none">Back to List</a>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll('.throwing-image');
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const safeZoneWidth = 1000; // Center area to avoid
+        const centerYMin = screenHeight / 3; // Minimum Y position near the center
+        const centerYMax = (2 * screenHeight) / 3; // Maximum Y position near the center
+        const minImageSize = 150; // Minimum image width and height
+
+        const leftSideEnd = (screenWidth - safeZoneWidth) / 2;
+        const rightSideStart = leftSideEnd + safeZoneWidth;
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function getRandomPosition(side, imageWidth) {
+            let x, y;
+
+            if (side === 'left') {
+                x = getRandomInt(0, leftSideEnd - imageWidth); // Ensure full image fits on the left side
+            } else {
+                x = getRandomInt(rightSideStart, screenWidth - imageWidth); // Ensure full image fits on the right side
+            }
+
+            // Set Y position closer to the vertical center
+            y = getRandomInt(centerYMin, centerYMax);
+
+            return { x, y };
+        }
+
+        function blinkImage(image, side) {
+            // Ensure the image has a minimum size of 150px for width and height
+            image.style.width = `${minImageSize}px`;
+            image.style.height = `${minImageSize}px`;
+
+            const imageWidth = image.offsetWidth; // Get the width of the image
+            const { x, y } = getRandomPosition(side, imageWidth);
+
+            image.style.position = 'absolute';
+            image.style.left = x + 'px';
+            image.style.top = y + 'px';
+            image.style.opacity = 0;
+
+            // Fade in
+            image.style.transition = 'opacity 1s';
+            image.style.opacity = 1;
+
+            setTimeout(() => {
+                // Fade out after 1 second
+                image.style.opacity = 0;
+            }, 1000);
+        }
+
+        function startBlinking() {
+            setInterval(() => {
+                // Choose a random image for the left side
+                const randomLeftImage = images[getRandomInt(0, images.length - 1)];
+                blinkImage(randomLeftImage, 'left');
+
+                // Choose a random image for the right side
+                const randomRightImage = images[getRandomInt(0, images.length - 1)];
+                blinkImage(randomRightImage, 'right');
+            }, 2000); // Blink every 2 seconds
+        }
+
+        startBlinking();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

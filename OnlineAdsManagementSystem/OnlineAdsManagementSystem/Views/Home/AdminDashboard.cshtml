@@ -1,0 +1,149 @@
+
+@{
+    ViewData["Title"] = "AdminDashboard";
+    // var getuserdata = ViewContext.HttpContext.Session.GetString("UserSession");
+
+}
+
+
+
+
+<div class="m-5 ">
+    <div class="col d-flex justify-content-center">
+        <div class="card m-2" style="background-color:lightgreen; width: 25rem; align-items:center; display:flex; text-align:center">
+            <div class="card-body">
+                <h2 class="card-title">Admin Dashboard </h2>
+                <br />
+                <h4 class="card-subtitle mb-2 text-muted">Welcome @ViewBag.WelcomeAdmin. You are an Admin </h4>
+                <h4 class="text-muted"> Your ID:@ViewBag.MySession</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col d-flex justify-content-center">
+
+       @*  <a href="/APIMethods/AddNewMainCategories" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 385px;">
+                <img class="card-img-top" src="~/images/mc.webp" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">Add Main Categories</h4>
+                    <p class="card-text">Effortlessly add main categories to optimize content organization. Simplify your admin management tasks.</p>
+                </div>
+            </div>
+        </a> *@
+
+        <a href="/APIMethods/AddNewMainCategories" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 385px;">
+                <img style="height: 350px;" class="card-img-top" src="~/images/mc.webp" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">Add Main Categories</h4>
+                    <p class="card-text">Effortlessly add main categories to optimize content organization. Simplify your admin management tasks.</p>
+                </div>
+            </div>
+        </a>
+
+
+        <a href="/APIMethods/AddNewSubCategories" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 385px;">
+                <img class="card-img-top" src="~/images/sc.jpg" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">Add Sub Categories</h4>
+                    <p class="card-text">Easily add subcategories to refine content structure. Enhance your admin control with streamlined management.</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/APIMethods/ViewMainCategories" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 385px;">
+                <img class="card-img-top" src="~/images/business-7136952_1280.png" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">View Main Categories</h4>
+                    <p class="card-text"> Effortlessly view, edit, or delete main categories. Simplify your admin tasks with intuitive controls. </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/APIMethods/ViewAllAds" class="text-decoration-none text-black">
+            <div class="card m-4" style="width: 18rem; height: 385px;">
+                <img style="height:225px" class="card-img-top" src="~/images/global-6635477_1280.png" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">View All Ads</h4>
+                    <p class="card-text">Hosts are Waiting to Go Live. Activate Their Ads And Help Grow Their Business.</p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+
+    <div class="col d-flex justify-content-center">
+        <a href="/APIMethods/SearchAds" class="text-decoration-none text-black">
+            <div class="card " style="width: 18rem; height:385px;">
+                <img style="height:225px" class="card-img-top" src="~/images/search-768328_1280.png" alt="Card image cap">
+
+                <div class="card-body">
+                    <h4 class="card-title col d-flex justify-content-center">Search Ads</h4>
+                    <p class="card-text">Not Getting What You Are Looking For? We Have Made It Easy For You. Search Here.</p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+
+
+    <form asp-controller="Home" asp-action="Logout" method="post">
+        <button type="submit" class="bg-danger btn-lg">Logout</button>
+    </form>
+
+
+
+@* 
+
+<td>
+    <form asp-controller="APIMethods" asp-action="AddNewMainCategories" method="get">
+        
+        <button type="submit" class="btn btn-primary btn-lg">Add New Main Categories</button>
+    </form>
+</td>
+<br />
+
+<td>
+    <form asp-controller="APIMethods" asp-action="AddNewSubCategories" method="get">
+
+        <button type="submit" class="btn btn-primary btn-lg">Add New Sub Categories</button>
+    </form>
+</td>
+<br />
+
+<td>
+    <form asp-controller="APIMethods" asp-action="ViewMainCategories" method="get">
+
+        <button type="submit" class="btn btn-primary btn-lg">View Main Categories</button>
+    </form>
+</td>
+<br />
+
+<td>
+    <form asp-controller="APIMethods" asp-action="ViewAllAds" method="get">
+
+        <button type="submit" class="btn btn-primary btn-lg">View All Ads</button>
+    </form>
+</td>
+<br />
+
+<td>
+    <form asp-controller="APIMethods" asp-action="SearchAds" method="get">
+
+        <button type="submit" class="btn btn-primary btn-lg">Search Ads</button>
+    </form>
+</td>
+<br />
+<a asp-controller="Home" asp-action="Logout"> Logout </a>
+ *@

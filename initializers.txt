@@ -1,0 +1,29 @@
+var provider = builder.Services.BuildServiceProvider();
+var config=provider.GetRequiredService<IConfiguration>();
+builder.Services.AddDbContext<CodeFirstDBContext>(item => item.UseSqlServer(config.GetConnectionString("dbcs")));
+
+
+add-migration <migration name>
+update-database
+
+
+
+or this one line below
+
+
+builder.Services.AddDbContext<CodeFirstDBContext>(item => item.UseSqlServer(builder.Configuration.GetConnectionString("dbcs")));
+
+
+
+
+
+services.AddDbContext<DEMOWTSSPortalContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+Scaffold-DbContext "server=SW015\SQLEXPRESS2019;Database=NewOnlineAdsDb;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models 
+
+
+
+Scaffold-DbContext "Server=SW015\SQLEXPRESS2019;Database=SW015\SQLEXPRESS2019;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context NewOnlineAdsDbContext -DataAnnotations

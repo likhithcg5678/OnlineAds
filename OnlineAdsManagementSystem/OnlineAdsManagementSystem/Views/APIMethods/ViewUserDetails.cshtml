@@ -1,0 +1,120 @@
+﻿@model OnlineAdsManagementSystem.Models.ViewUserDetailsDTO
+
+@{
+    ViewData["Title"] = "ViewUserDetails";
+}
+
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+    <div class="card bg-dark " style="width: 30rem; height: auto;">
+        <h1 class="col d-flex justify-content-center m-3 text-white">User Details</h1>
+
+        <div class=" col d-block justify-content-center border-5 border-dark">
+            
+                <div class="col d-flex justify-content-center m-3 ">
+                    <div class="card" style="width: 20rem; height:auto">
+
+
+                        <div class="card-body">
+
+
+                            <div class="col d-flex flex-column align-items-center">
+                                <p class="card-text ">
+                                    <span style="color:black; font-weight:600; ">Full Name</span> : @Html.DisplayFor(model => model.FullName)
+                                    <br />
+                                <span style="color:black; font-weight:600; ">DOB</span>: @Html.DisplayFor(model => model.Dob)
+                                    <br />
+                                <span style="color:black; font-weight:600; ">Gender</span>: @Html.DisplayFor(model => model.Gender)
+                                    <br />
+                                <span style="color:black; font-weight:600; ">Email ID</span>: @Html.DisplayFor(model => model.EmailId)
+                                    <br />
+                                <span style="color:black; font-weight:600; ">City</span>: @Html.DisplayFor(model => model.City)
+                                    <br />
+                                <span style="color:black; font-weight:600; ">State</span>: @Html.DisplayFor(model => model.State)
+                                    <br />
+                                <span style="color:black; font-weight:600; ">Phone Number</span>: @Html.DisplayFor(model => model.PhoneNo)
+                                    <br />
+                                @* <span style="color:black; font-weight:600; ">User Type</span>: @Html.DisplayFor(model => model.UserType)
+                                    <br /> *@
+                                </p>
+
+                           </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+       asp-controller="Home" asp-action="UserDashboard">
+        Back to Dashboard
+    </a>
+</div>
+
+
+
+
+
+@* <div>
+    <h4>ViewUserDetailsDTO</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Dob)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Dob)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmailId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.City)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.State)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNo)
+        </dd>        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserType)
+        </dd>
+    </dl>
+</div> *@
+

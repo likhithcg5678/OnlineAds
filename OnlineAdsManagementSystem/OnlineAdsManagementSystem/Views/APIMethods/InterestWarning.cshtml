@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "InterestWarning";
+}
+
+@{
+    if (TempData["InterestIdExist"] != null)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong> @TempData["InterestIdExist"] </strong>
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+    }
+}
+
+<div>
+    <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+       asp-controller="Home" asp-action="UserDashboard">
+        Back to Dashboard
+    </a>
+</div>
+

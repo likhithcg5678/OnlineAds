@@ -1,0 +1,33 @@
+login page design
+
+
+
+1. adding sessions
+adding sessions using builder.Services.AddSession(); before build in program.cs
+after build--app.UseSession();
+
+
+2. scaffold db context cmd
+
+dont forget to use http client for creating session
+
+check if the email is present in db by accessing db context variable--            var myUser = context.UserTbls.Where(x => x.Email == user.Email && x.Password == user.Password).FirstOrDefault();
+
+
+
+if session is not null then print the data in dashboard view using ViewBag
+
+
+
+HttpContext.Session.Remove("UserSession"); ----to remove or kill the session
+
+
+
+await context.UserTbls.AddAsync(user);
+await context.SaveChangesAsync();======adding and saving new user in the database
+
+
+
+
+
+<a asp-controller="Home" asp-action="Logout"> Logout </a>--- direct links to go to action methods

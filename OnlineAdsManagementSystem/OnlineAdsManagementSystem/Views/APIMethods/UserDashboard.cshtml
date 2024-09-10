@@ -1,0 +1,57 @@
+
+@{
+    ViewData["Title"] = "UserDashboard";
+}
+
+@{
+    var gotuserid = TempData["Passuserid"];
+    var UserIdForFullSession = ViewBag.MySession;
+}
+
+<h1>User Dashboard</h1>
+<h3>@ViewBag.MySession</h3>
+
+<h3>Welcome @ViewBag.Try</h3>
+<br />
+<form asp-controller="APIMethods" asp-action="ViewAllAds" method="get">
+    <!-- You don't need to add any fields if you are just navigating -->
+    <button type="submit" class="btn btn-primary btn-lg">View All Ads</button>
+</form>
+<br />
+
+<form asp-controller="APIMethods" asp-action="PostYourAd" method="get">
+    <!-- You don't need to add any fields if you are just navigating -->
+    <button type="submit" class="btn btn-primary btn-lg">Post Your Ad</button>
+</form>
+<br />
+@* <form asp-controller="APIMethods" asp-action="ViewMyAds" method="get">
+    <!-- You don't need to add any fields if you are just navigating -->
+    <button type="submit" class="btn btn-primary btn-lg">View My Ads</button>
+</form>
+<br /> *@
+
+<form asp-controller="APIMethods" asp-action="ViewMyAds" method="get">
+    <input type="hidden" name="userid" value="@gotuserid" /> @* this line is for passing parameter for ViewMyAds *@
+    <button type="submit" class="btn btn-primary btn-lg">View My Ads</button>
+</form>
+<br />
+
+<form asp-controller="APIMethods" asp-action="ViewMyInterests" method="get">
+    <input type="hidden" name="userid" value="@gotuserid" /> @* this line is for passing parameter for ViewMyAds *@
+    <button type="submit" class="btn btn-primary btn-lg">View My Interests</button>
+</form>
+<br />
+
+@* <form asp-controller="APIMethods" asp-action="SearchAdsBasedOnCategory" method="get">    
+    <button type="submit" class="btn btn-primary btn-lg">Search ads Based<br /> on  Categories</button>
+</form>
+<br /> *@
+
+<form asp-controller="APIMethods" asp-action="SearchCategoryWise" method="get">
+    <button type="submit" class="btn btn-primary btn-lg">Search ads Based<br /> on  Categories</button>
+</form>
+<br />
+
+
+<a asp-controller="APIMethods" asp-action="Logout"> Logout </a>
+

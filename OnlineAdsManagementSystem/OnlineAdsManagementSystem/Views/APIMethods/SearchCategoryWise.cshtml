@@ -1,0 +1,122 @@
+﻿@model OnlineAdsManagementSystem.Models.NewViewAllAds
+
+@{
+    ViewData["Title"] = "SearchCategoryWise";
+}
+
+
+@{
+    if (TempData["NoCategory"] != null)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong> @TempData["NoCategory"] </strong>
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+}
+
+
+
+
+<div class="col d-flex justify-content-center m-3 ">
+    <div class="card bg-dark mt-5" style="width: 38rem; height:auto ;">
+        <br />
+        <h1 class="text-white col d-flex justify-content-center">Search Category Wise</h1>
+
+        <div class="card-body">
+
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <form asp-action="SearchCategoryWise">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        
+
+                        <div class="form-group">
+                            <label asp-for="mCname" class="control-label"></label>
+                            <select asp-for="mCname" class="form-control" id="mainCategory">
+                                <option value="">Choose MainCategory</option>
+                                @{
+                                    if (ViewBag.MainCategories!=null)
+                                    {
+                                        @foreach (var item in ViewBag.MainCategories)
+                                        {
+                                            <option value="@item.Text" data-group="@item.Group.Name">@item.Text</option>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                            <strong> @TempData["NoCategory"] </strong>
+
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                    }
+                                }
+                               
+                            </select>
+                            <span asp-validation-for="mCname" class="text-danger"></span>
+                        </div>
+
+                       
+                        <div class="form-group">
+                            <input type="submit" value="Search" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div>
+    <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+       asp-controller="Home" asp-action="UserDashboard">
+        Back to Dashboard
+    </a>
+</div>
+
+
+
+
+@* 
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SearchCategoryWise">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="mCname" class="control-label"></label>
+                <select asp-for="mCname" class="form-control" id="mainCategory">
+                    <option value="">Choose MainCategory</option>
+                    @foreach (var item in ViewBag.MainCategories)
+                    {
+                        <option value="@item.Text" data-group="@item.Group.Name">@item.Text</option>
+                    }
+                </select>
+                <span asp-validation-for="mCname" class="text-danger"></span>
+            </div>
+
+           
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div>
+    <a asp-controller="Home" asp-action="UserDashboard">Back to List</a>
+</div>
+ *@

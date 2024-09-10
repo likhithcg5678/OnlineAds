@@ -1,0 +1,190 @@
+﻿@model IEnumerable<OnlineAdsManagementSystem.Models.NewViewAllAds>
+
+@{
+	ViewData["Title"] = "SearchCategoryWiseList";
+	var takemyIdbysession = ViewContext.HttpContext.Session.GetString("UserSession");
+}
+
+
+
+
+
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+	<div class="card bg-dark mt-5" style="width: 68rem; height: auto;">
+		<h1 class="col d-flex justify-content-center m-3 text-white"> Category Wise Display</h1>
+
+		<div class=" col d-block justify-content-center border-5 border-dark mt-4">
+			@foreach (var item in Model)
+			{
+				<div class="col d-flex justify-content-center m-3 ">
+					<div class="card" style="width: 38rem; height:auto">
+
+
+						<div class="card-body">
+
+							<a href="~/images/@Html.DisplayFor(modelItem => item.ImageUrl)" target="_blank" class="col d-flex justify-content-center">
+								<img src="~/images/@Html.DisplayFor(modelItem => item.ImageUrl)" alt="User has not added the image" class="card-img-top img-fluid" style="max-width: 35%; max-height: 300px;" />
+							</a>
+
+							<h5 class="card-title mt-3 text-center">
+								@Html.DisplayFor(modelItem => item.adTitle)
+							</h5>
+
+
+
+
+							<div class="col d-flex flex-column align-items-center">
+								<p class="card-text ">
+									<span style="color:black; font-weight:600; ">Ad ID</span> : @Html.DisplayFor(modelItem => item.adId)
+									<br />
+									<span style="color:black; font-weight:600; ">User ID</span>: @Html.DisplayFor(modelItem => item.userId)
+									<br />
+									<span style="color:black; font-weight:600; ">Main Category</span>: @Html.DisplayFor(modelItem => item.mCname)
+									<br />
+									<span style="color:black; font-weight:600; ">Sub Category</span>: @Html.DisplayFor(modelItem => item.sCname)
+									<br />
+									<span style="color:black; font-weight:600; ">Ad Title</span>: @Html.DisplayFor(modelItem => item.adTitle)
+									<br />
+									<span style="color:black; font-weight:600; ">Ad Description</span>: @Html.DisplayFor(modelItem => item.adDescription)
+									<br />
+									<span style="color:black; font-weight:600; ">Contact Name</span>: @Html.DisplayFor(modelItem => item.contactName)
+									<br />
+									<span style="color:black; font-weight:600; ">Contact Email</span>: @Html.DisplayFor(modelItem => item.contactEmail)
+									<br />
+									<span style="color:black; font-weight:600; ">Phone Number</span>: @Html.DisplayFor(modelItem => item.phoneNumber)
+									<br />
+									<span style="color:black; font-weight:600; ">Status</span>: @Html.DisplayFor(modelItem => item.status)
+									<br />
+									<form asp-controller="APIMethods" asp-action="SendInt" method="get">
+										<input type="hidden" name="adId" value="@item.adId" />
+										<input type="hidden" name="userId" value="@takemyIdbysession" />
+										<button type="submit" class="btn btn-primary btn-sm">Send Interest</button>
+									</form>
+									<br />
+
+								</p>
+
+
+							</div>
+
+
+
+
+
+
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+
+<br />
+<br />
+<br />
+<div>
+	<a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+	   asp-controller="Home" asp-action="UserDashboard">
+		Back to Dashboard
+	</a>
+</div>
+
+
+
+
+@* <table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.adId)
+			</th>
+			
+			<th>
+				@Html.DisplayNameFor(model => model.userId)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.mCname)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.sCname)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.adTitle)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.adDescription)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.contactName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.contactEmail)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.phoneNumber)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.status)
+			</th>
+			<th>
+				Image
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.adId)
+				</td>
+				
+				<td>
+					@Html.DisplayFor(modelItem => item.userId)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.mCname)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.sCname)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.adTitle)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.adDescription)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.contactName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.contactEmail)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.phoneNumber)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.status)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.ImageUrl)
+				</td>
+				<td>
+					<form asp-controller="APIMethods" asp-action="SendInt" method="get">
+						<input type="hidden" name="adId" value="@item.adId" />
+						<input type="hidden" name="userId" value="@takemyIdbysession" />
+						<button type="submit" class="btn btn-primary btn-sm">Send Interest</button>
+					</form>
+				</td>
+			</tr>
+		}
+	</tbody>
+	<div>
+		<a asp-controller="Home" asp-action="UserDashboard">Back to List</a>
+	</div>
+</table>
+ *@

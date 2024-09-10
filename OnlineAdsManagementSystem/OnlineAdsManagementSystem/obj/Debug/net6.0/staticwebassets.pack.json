@@ -1,0 +1,421 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\OnlineAdsManagementSystem.bundle.scp.css",
+      "PackagePath": "staticwebassets\\OnlineAdsManagementSystem.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\03533fc8-69ba-4402-b016-1b695fcb06d1_secon.jpg",
+      "PackagePath": "staticwebassets\\images\\03533fc8-69ba-4402-b016-1b695fcb06d1_secon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\12179bbe-5eda-438d-bc6b-8781054ebdbc_06Suzuki-GSX-R-1000.jpg",
+      "PackagePath": "staticwebassets\\images\\12179bbe-5eda-438d-bc6b-8781054ebdbc_06Suzuki-GSX-R-1000.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\240_F_287413716_2VUdz9H5pvu4eObgN2l8dZNHSiO1DEx6.jpg",
+      "PackagePath": "staticwebassets\\images\\240_F_287413716_2VUdz9H5pvu4eObgN2l8dZNHSiO1DEx6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\4c489916-30ab-4144-a6f3-f341cfdadde0_hp victus.png",
+      "PackagePath": "staticwebassets\\images\\4c489916-30ab-4144-a6f3-f341cfdadde0_hp victus.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\4f35ef06-3baf-41cb-b491-c34e9aa569e9_roll.jpg",
+      "PackagePath": "staticwebassets\\images\\4f35ef06-3baf-41cb-b491-c34e9aa569e9_roll.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\5364b3ea-41b1-4601-a05e-24798cbdfcdd_1_64170ada-4cbc-46e1-83fd-454464d3a2d0_grande.webp",
+      "PackagePath": "staticwebassets\\images\\5364b3ea-41b1-4601-a05e-24798cbdfcdd_1_64170ada-4cbc-46e1-83fd-454464d3a2d0_grande.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\7d077a3a-ada7-4736-81a2-be1150619b75_apartment.webp",
+      "PackagePath": "staticwebassets\\images\\7d077a3a-ada7-4736-81a2-be1150619b75_apartment.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\7f22043e-fcc7-44ef-bd7e-031c69c62587_ferari.webp",
+      "PackagePath": "staticwebassets\\images\\7f22043e-fcc7-44ef-bd7e-031c69c62587_ferari.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\826de5a3-747d-4ee9-8e37-78fd68fcd329_puma.webp",
+      "PackagePath": "staticwebassets\\images\\826de5a3-747d-4ee9-8e37-78fd68fcd329_puma.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\8ea2b879-71b1-43ba-b9d2-e972217fb47d_heart-5614865_1280.png",
+      "PackagePath": "staticwebassets\\images\\8ea2b879-71b1-43ba-b9d2-e972217fb47d_heart-5614865_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\About Whatsapp.jpg",
+      "PackagePath": "staticwebassets\\images\\About Whatsapp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\Whatsapp Background Wallpapers Aesthetic.jpg",
+      "PackagePath": "staticwebassets\\images\\Whatsapp Background Wallpapers Aesthetic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\a1a0a331-0587-4923-bbb9-78585a36bd99_nike.webp",
+      "PackagePath": "staticwebassets\\images\\a1a0a331-0587-4923-bbb9-78585a36bd99_nike.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\business-7136952_1280.png",
+      "PackagePath": "staticwebassets\\images\\business-7136952_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\cat-8239223_1280.png",
+      "PackagePath": "staticwebassets\\images\\cat-8239223_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\ce6b44f5-5541-431a-ae29-f959ed756b34_ferari.webp",
+      "PackagePath": "staticwebassets\\images\\ce6b44f5-5541-431a-ae29-f959ed756b34_ferari.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\e015d7fa-95f9-4f2e-b006-421cd765a7b5_heart-5614865_1280.png",
+      "PackagePath": "staticwebassets\\images\\e015d7fa-95f9-4f2e-b006-421cd765a7b5_heart-5614865_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\f45002f7-cf21-40f1-a019-0daa5a68c004_watch-42803_1280.png",
+      "PackagePath": "staticwebassets\\images\\f45002f7-cf21-40f1-a019-0daa5a68c004_watch-42803_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\f4e8746d-b077-4eb1-b1e8-a44b142260d5_iqoo.webp",
+      "PackagePath": "staticwebassets\\images\\f4e8746d-b077-4eb1-b1e8-a44b142260d5_iqoo.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\global-6635477_1280.png",
+      "PackagePath": "staticwebassets\\images\\global-6635477_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\main category.jpg",
+      "PackagePath": "staticwebassets\\images\\main category.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\mc.webp",
+      "PackagePath": "staticwebassets\\images\\mc.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\pexels-christian-heitz-285904-842711.jpg",
+      "PackagePath": "staticwebassets\\images\\pexels-christian-heitz-285904-842711.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\Red-megaphone-is-advertising-selling-products-online-Clipart-PNG.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\Red-megaphone-is-advertising-selling-products-online-Clipart-PNG.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\flat-2126880_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\flat-2126880_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\footwear-7055005_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\footwear-7055005_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\ford-mustang-146580_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\ford-mustang-146580_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\heart-5614865_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\heart-5614865_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\like-2651767_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\like-2651767_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\mail-1454734_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\mail-1454734_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\phone-2374915_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\phone-2374915_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\sweater-150533_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\sweater-150533_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\popupimages\\watch-42803_1280.png",
+      "PackagePath": "staticwebassets\\images\\popupimages\\watch-42803_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\sc.jpg",
+      "PackagePath": "staticwebassets\\images\\sc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\search-768328_1280.png",
+      "PackagePath": "staticwebassets\\images\\search-768328_1280.png"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\smartphone-8930867_1280.jpg",
+      "PackagePath": "staticwebassets\\images\\smartphone-8930867_1280.jpg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\sub category.svg",
+      "PackagePath": "staticwebassets\\images\\sub category.svg"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\images\\subc.webp",
+      "PackagePath": "staticwebassets\\images\\subc.webp"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\likhi\\OneDrive\\Desktop\\Online ads git\\OnlineAdsManagementSystem\\OnlineAdsManagementSystem\\wwwroot\\sub category.svg",
+      "PackagePath": "staticwebassets\\sub category.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.OnlineAdsManagementSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.OnlineAdsManagementSystem.props",
+      "PackagePath": "build\\OnlineAdsManagementSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.OnlineAdsManagementSystem.props",
+      "PackagePath": "buildMultiTargeting\\OnlineAdsManagementSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.OnlineAdsManagementSystem.props",
+      "PackagePath": "buildTransitive\\OnlineAdsManagementSystem.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

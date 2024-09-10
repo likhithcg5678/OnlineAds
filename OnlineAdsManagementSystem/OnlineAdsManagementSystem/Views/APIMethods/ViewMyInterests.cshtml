@@ -1,0 +1,131 @@
+﻿@model IEnumerable<OnlineAdsManagementSystem.Models.FilteredPropertiesOfInterest>
+
+@{
+	ViewData["Title"] = "ViewMyInterests";
+}
+
+
+
+
+
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+	<div class="card bg-dark mt-5" style="width: 68rem; height: auto;">
+		<h1 class="col d-flex justify-content-center m-3 text-white">My Interests</h1>
+
+		<div class=" col d-block justify-content-center border-5 border-dark mt-4">
+			@foreach (var item in Model)
+			{
+				<div class="col d-flex justify-content-center m-3 ">
+					<div class="card" style="width: 38rem; height:auto">
+
+
+						<div class="card-body">
+
+							<a href="~/images/@Html.DisplayFor(modelItem => item.ImageUrl)" target="_blank" class="col d-flex justify-content-center">
+								<img src="~/images/@Html.DisplayFor(modelItem => item.ImageUrl)" alt="User has not added the image" class="card-img-top img-fluid" style="max-width: 35%; max-height: 300px;" />
+							</a>
+
+							<h5 class="card-title mt-3 text-center">
+								Ad ID:@Html.DisplayFor(modelItem => item.adId)
+							</h5>
+
+
+
+
+							<div class="col d-flex flex-column align-items-center">
+								<p class="card-text ">
+									
+									<span style="color:black; font-weight:600; ">User ID</span>: @Html.DisplayFor(modelItem => item.userId)
+									<br />
+									<span style="color:black; font-weight:600; ">Interest Message</span>: @Html.DisplayFor(modelItem => item.interestMessage)
+									<br />
+									<span style="color:black; font-weight:600; ">Time Stamp</span>: @Html.DisplayFor(modelItem => item.timestamp)
+									<br />
+								</p>
+
+
+							</div>
+
+
+
+
+
+
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>
+
+
+<br />
+<br />
+<br />
+<div>
+	<a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+	   asp-controller="Home" asp-action="UserDashboard">
+		Back to Dashboard
+	</a>
+</div>
+
+
+
+
+
+@* 
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.interestId)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.adId)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.userId)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.interestMessage)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.timestamp)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.ImageUrl)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.interestId)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.adId)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.userId)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.interestMessage)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.timestamp)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.ImageUrl)
+				</td>
+				
+			</tr>
+		}
+	</tbody>
+</table>
+ *@

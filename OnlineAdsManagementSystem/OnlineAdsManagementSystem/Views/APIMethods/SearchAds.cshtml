@@ -1,0 +1,78 @@
+﻿@model OnlineAdsManagementSystem.Models.SearchInput
+
+@{
+    ViewData["Title"] = "SearchAds";
+}
+
+@if (ViewBag.ErrorTitle != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>No Such Products Found</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+<div class="col d-flex justify-content-center m-3 ">
+    <div class="card bg-dark mt-5" style="width: 38rem; height:auto ;">
+        <br />
+        <h1 class="text-white col d-flex justify-content-center">Search Ads </h1>
+
+        <div class="card-body text-white">
+
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <form asp-action="SearchAds">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="title" class="control-label">Enter Keyword or Product Name</label>
+                            <input asp-for="title" class="form-control" />
+                            <span asp-validation-for="title" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div>
+    <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+       asp-controller="Home" asp-action="AdminDashboard">
+        Back to Dashboard
+    </a>
+</div>
+
+
+@* <div class="row">
+    <div class="col-md-4">
+        <form asp-action="SearchAds">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="title" class="control-label">Enter Title</label>
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="AdminDashboard">Back to List</a>
+</div> *@
+

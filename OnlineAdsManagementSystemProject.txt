@@ -1,0 +1,650 @@
+few model states can be explicitly removed by the developer like the below if not all the validations are not passing
+
+ModelState.Remove("UserType");
+ModelState.Remove("Ads");
+ModelState.Remove("Interests");
+if (ModelState.IsValid)
+{
+    await context.Users.AddAsync(user);
+    await context.SaveChangesAsync();
+    TempData["Success"] = "Registration Successful!!!";
+    TempData["UserId"] = user.UserId;
+    //return RedirectToAction("Login");
+}
+
+
+in api method creation for creating ad i got stuck . then i created a data transfer object class AdDTO to get only the required data and i put [JsonIgnore] attribute in Ad class and made changes in the api controller like below
+
+***REMEMBER*** I first coded CreateAd method and at last i created GetAllAds
+
+[HttpPost]
+public async Task<ActionResult<AdDTO>> CreateAd(AdDTO adDto)
+{
+    if (adDto == null)
+    {
+        return BadRequest("Ad data is null");
+    }
+
+    var ad = new Ad
+    {
+        UserId = adDto.UserId,
+        Mcname = adDto.MCname,
+        Scname = adDto.SCname,
+        AdTitle = adDto.AdTitle,
+        AdDescription = adDto.AdDescription,
+        ContactName = adDto.ContactName,
+        ContactEmail = adDto.ContactEmail,
+        PhoneNumber = adDto.PhoneNumber,
+        Status = adDto.Status
+    };
+
+    await context.Ads.AddAsync(ad);
+    await context.SaveChangesAsync();
+    return Ok(ad);
+}
+
+AdDTO class was created bcs all the reference tables and unwanted data were being displayed in swagger interface and error code was getting generated after executing. to avoid unwanted data i need to use AdDTO class and [JsonIgnore]
+ attributes in Ad class 
+
+
+
+
+REMEMBER if you are geting data from api swagger methods then you must create separate api controller and create views inside that controller , not inside the normal mvc controller
+
+
+
+Tempdata can be used to send the data from controller to any views
+
+
+Read-Only Input Field: The input element with the readonly attribute ensures the UserId is displayed but not editable.
+@{
+    var userId = TempData["PassId"];
+}
+<input asp-for="UserId" class="form-control" readonly value="@userId" />
+
+
+
+
+Usually inside LINQ the lambda expressions are used especially inside clauses like SELECT, WHERE etc... see below snippets
+var ads = await context.Ads
+                           .Where(a => a.UserId == userid)
+                           .ToListAsync();
+
+var adDtos = ads.Select(ad => new AdDTO
+    {
+        AdId = ad.AdId,
+        UserId = ad.UserId,
+        MCname = ad.MCname,
+        SCname = ad.SCname,
+        AdTitle = ad.AdTitle,
+        AdDescription = ad.AdDescription,
+        ContactName = ad.ContactName,
+        ContactEmail = ad.ContactEmail,
+        PhoneNumber = ad.PhoneNumber,
+        Status = ad.Status
+    }).ToList();
+
+
+
+
+
+
+
+
+var ads = await context.Ads
+                           .Where(a => a.UserId == userid)
+                           .ToListAsync();-- multiple data is coming here so its converted to string here
+
+
+
+
+
+chatgpt query-----can i just include user/{userid} instead of user/{userid}/ads?
+Yes, you can use a simpler route like user/{userid} instead of user/{userid}/ads. However, it's important to ensure that the route is descriptive and clearly indicates the purpose. The route user/{userid}/ads explicitly states that you are fetching ads for a specific user, which can be clearer for someone reading your API definition.
+
+
+
+
+-----REMEMBER pass the Tempdata value from the Views.cshtml files and store it in var datatype if you are not able to retreive it in any controller class
+
+
+@{
+    var gotuserid = TempData["Passuserid"];
+    
+}
+
+ and then pass that value stored in var datatype through forms like below
+
+<form asp-controller="APIMethods" asp-action="ViewMyAds" method="get">
+    <input type="hidden" name="userid" value="@gotuserid" />
+    <button type="submit" class="btn btn-primary btn-lg">View My Ads</button>
+</form>
+
+==========================================================================
+
+chatgpt query----<form asp-controller="APIMethods" asp-action="ViewMyAds" method="get">
+can i pass parameters in asp-action like...ViewMyAds(int userid)?
+
+
+You cannot directly pass parameters in the asp-action attribute in the way you described. However, you can pass parameters through query string parameters or route values in the form's action URL.
+
+Here's how you can do it:
+
+Using Query String Parameters:
+
+In the form, include a hidden field to pass the userid as a query string parameter. 
+
+
+<form asp-controller="APIMethods" asp-action="ViewMyAds" method="get">
+    <input type="hidden" name="userid" value="@TempData["UserId"]" />
+    <button type="submit" class="btn btn-primary btn-lg">View My Ads</button>
+</form>
+
+
+
+Handling in the Controller:
+
+In the controller, you can receive this parameter through the action method.
+
+public class APIMethodsController : Controller
+{
+    private readonly string url = "https://localhost:7186/api/OnlineAdsAPI/";
+    private readonly HttpClient client = new HttpClient();
+
+    [HttpGet]
+    public IActionResult ViewMyAds(int userid)
+    {
+        List<NewViewMyAds> DisplayMyAds = new List<NewViewMyAds>();
+        HttpResponseMessage response = client.GetAsync(url + "user/" + userid).Result;
+        if (response.IsSuccessStatusCode)
+        {
+            string result = response.Content.ReadAsStringAsync().Result;
+            var data = JsonConvert.DeserializeObject<List<NewViewMyAds>>(result);
+            if (data != null)
+            {
+                DisplayMyAds = data;
+            }
+        }
+        return View(DisplayMyAds);
+    }
+}
+
+
+===================================================================================================
+
+
+to pass parameters in return redirecttoaction we can perform as shown below 
+return RedirectToAction("ViewMyAds", new { userid = Ad.userId });
+
+
+while updating the data using api , [HttpPost] has to be used above Edit() in MVC even though [HttpPut] is added in api.
+
+
+
+
+
+REMEMBER dont use TempData in multiple places. even though if you want to use it create new tempdata and assign the same value for eg
+TempData["PassId"]=ViewBag.MySession;
+TempData["Passuserid"]=ViewBag.MySession;
+
+
+
+
+
+1. in mvc controller action methods(not api controllers) whatever operations(C,R,U,D) only HttpGet and HttpPost are used. no using HttpPut and HttpDelete 
+
+
+
+
+2. always perform the operations in C, R, U, D fashion bcs if there are multiple controllers especially api and mvc controller and if you want tempdata to store say... userid , it has to be created first before reading
+
+return RedirectToAction("ViewMyAds", new { userid = TempData["RecordId"] });---struggled lot for this and stored user id to TempData["RecordId"] from same controller from PostAd action method. i couldnt get it from Home controller
+
+
+
+3.var userId = ViewContext.HttpContext.Session.GetString("UserSession");==== you have to use ""ViewContext."" to access session in views. without using that you cannot access session inside views
+ 
+
+
+4. you can pass parameters inside  bootstrap button  by using input type = hidded like the below 
+
+<form asp-controller="APIMethods" asp-action="SendInt" method="get">
+    <input type="hidden" name="adId" value="@item.adId" />
+    <input type="hidden" name="userId" value="@takemyIdbysession" />
+    <button type="submit" class="btn btn-primary btn-sm">Send Interest</button>
+</form>
+ 
+
+but the acion method should contain the paramers to hold these values like... 
+[HttpGet]
+public IActionResult SendInt(int adId, int userId)
+{
+    var model = new Interest
+    {
+        AdId = adId,
+        UserId = userId
+    };
+    return View(model);
+}
+
+
+
+
+
+5. understand the importance of asp-for ---- see below
+[HttpGet]
+public IActionResult SendInt(int adId, int userId)
+{
+    var model = new Interest
+    {
+        AdId = adId,
+        UserId = userId
+    };
+
+    var random = new Interest
+    {
+        AdId = adId,
+        UserId = userId
+    };
+    return View(model);
+}
+an object of Interest class called model  is created and we know inside Interest class we have properties like AdId and UserId. these are initialised by the parameter values.assume that the AdId and UserId of random object was having different values. For the view we are passing model object so asp-for is binded with the values inside model object not the random object. so the data in those fields are already prefetched and the field is made as readonly. if i had simply returned the View without passing model------>ie: return View(); the data would not be prefetched .the user would have to enter the data manually for those fields. see the view file below
+
+
+@model OnlineAdsManagementSystem.Models.Interest
+
+@{
+    ViewData["Title"] = "SendInt";
+}
+
+
+
+<h1>SendInt</h1>
+
+<h4>Interest</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SendInt">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AdId" class="control-label"></label>
+                <input asp-for="AdId" class="form-control"  readonly/>
+                <span asp-validation-for="AdId" class="text-danger"></span>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" readonly />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+                
+            </div>
+            <div class="form-group">
+                <label asp-for="InterestMessage" class="control-label"></label>
+                <input asp-for="InterestMessage" class="form-control" />
+                <span asp-validation-for="InterestMessage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit Interest" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
+
+
+
+
+
+
+
+6. just remember when you create a  separate DTO class in api project you should also create separate class in normal Web project and every operation like return types, choosing model class while selecting templates like create, deatails, Update etc has to be done with these DTO CLASSES and filtered properties class(   :)remember the shortcut to paste properties as paste special option in edit tab)---- for example The DTO class used in api project was AdDTO.cs and filtered property class is NewViewAllAds.cs----> in theses both dto class and filtered class all the properties of original Ad.cs Class is not used bcs unwanted data is generated during execution of api methods in swagger.
+
+
+
+7. if you want any data to stay along with you till you close the session use sessions concept 
+HttpContext.Session.SetString("frontpagename", myUser.FullName.ToString());
+ViewBag.Try= HttpContext.Session.GetString("frontpagename").ToString();------directly assigning session to ViewBag doesnt loose data even after multiple redirections but condition is usage must be direct with its name itself like----><h3>@ViewBag.Try</h3>
+
+
+
+======================================================================================================
+8.IMPORTANT API QUESTION FOR CHATGPT
+
+
+
+
+
+[HttpPost("SearchAdsByMainCategory")]
+public async Task<ActionResult<OnlyMainCategory>> SearchAdsByMainCategory(OnlyMainCategory mc)
+{
+    var ads = await context.Ads
+                   .Where(a => a.Mcname == mc.MCname)
+                   .ToListAsync();
+
+    if (ads == null || !ads.Any())
+    {
+        return NotFound();
+    }
+
+    var mcads = ads.Select(ad => new OnlyMainCategory
+    {
+
+        UserId = ad.UserId,
+        MCname = ad.Mcname,
+        SCname = ad.Scname,
+        AdTitle = ad.AdTitle,
+        AdDescription = ad.AdDescription,
+        ContactName = ad.ContactName,
+        ContactEmail = ad.ContactEmail,
+        PhoneNumber = ad.PhoneNumber,
+        Status = ad.Status
+
+    }).ToList();
+
+    return Ok(mcads);
+
+}
+
+
+
+
+using System.Text.Json.Serialization;
+
+namespace OnlineAdsManagementSystemWebAPI.Models
+{
+    public class OnlyMainCategory
+    {
+        [JsonIgnore]
+        public int AdId { get; set; }
+        [JsonIgnore]
+        public int UserId { get; set; }
+        public string MCname { get; set; }
+        [JsonIgnore]
+        public string SCname { get; set; }
+        [JsonIgnore]
+        public string AdTitle { get; set; }
+        [JsonIgnore]
+        public string AdDescription { get; set; }
+        [JsonIgnore]
+        public string ContactName { get; set; }
+        [JsonIgnore]
+        public string ContactEmail { get; set; }
+        [JsonIgnore]
+        public string PhoneNumber { get; set; }
+        [JsonIgnore]
+        public string Status { get; set; }
+    }
+}
+
+
+
+in this webapi method i need to only pass main category value but i need to retreive all the data from the row that match main category value. how can i achieve this?    -------(BASICALLY I WANTED TO RETREIVE ALL VEHICLES PASSED UNDER MAIN CATEGORIES )
+
+
+
+
+To achieve this, you need to adjust your OnlyMainCategory model and your API method. The goal is to ensure that the OnlyMainCategory model contains only the properties needed for input (in this case, MCname), but the returned results include all the properties you want to retrieve.
+
+Step-by-Step Solution:
+Adjust the OnlyMainCategory Model:
+
+Ensure that the model includes all necessary properties but only exposes MCname for the input.
+Update the API Method:
+
+The method should only accept MCname as input and use it to filter the database.
+Return a list of a different model or the same model without the [JsonIgnore] attributes for output.
+
+
+
+
+
+
+Ensure that the model includes all necessary properties but only exposes MCname for the input.-----(I REPLIED AND ASKED CHATGPT. SEE BELOW)
+
+how to achieve this?----(IT MEANS THE ABOVE QUESTION)
+
+
+
+
+To achieve the goal of having an input model that only includes the MCname property and an output model that includes all necessary properties, you can use two separate models: one for the input and one for the output.
+
+Step-by-Step Solution
+1.Create a Model for Input (OnlyMainCategoryInput): This model will only have the MCname property.
+2.Modify the Existing Model (OnlyMainCategory): This model will have all the necessary properties for output.
+
+
+Define the Models:
+
+1ST CLASS
+namespace OnlineAdsManagementSystemWebAPI.Models
+{
+    public class OnlyMainCategoryInput
+    {
+        public string MCname { get; set; }
+    }
+}
+
+
+2ND CLASS
+namespace OnlineAdsManagementSystemWebAPI.Models
+{
+    public class OnlyMainCategoryAllOutput
+    {
+        
+        public int AdId { get; set; }
+        public int UserId { get; set; }
+        public string MCname { get; set; }
+        public string SCname { get; set; }
+        public string AdTitle { get; set; }
+        public string AdDescription { get; set; }
+        public string ContactName { get; set; }
+        public string ContactEmail { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Status { get; set; }
+    }
+}
+
+
+
+Update the API Method
+
+
+
+ [HttpPost("SearchAdsByMainCategory")]
+ public async Task<ActionResult<OnlyMainCategoryAllOutput>> SearchAdsByMainCategory(OnlyMainCategoryInput mc)
+ {
+     var ads = await context.Ads
+                    .Where(a => a.Mcname == mc.MCname)
+                    .ToListAsync();
+
+     if (ads == null || !ads.Any())
+     {
+         return NotFound();
+     }
+
+     var mcads = ads.Select(ad => new OnlyMainCategoryAllOutput
+     {
+
+         UserId = ad.UserId,
+         MCname = ad.Mcname,
+         SCname = ad.Scname,
+         AdTitle = ad.AdTitle,
+         AdDescription = ad.AdDescription,
+         ContactName = ad.ContactName,
+         ContactEmail = ad.ContactEmail,
+         PhoneNumber = ad.PhoneNumber,
+         Status = ad.Status
+
+     }).ToList();
+
+     return Ok(mcads);
+
+ }
+
+
+
+:)WORKING FINE  but i did it in another way after i came to know that it should be hit by HTTPGET and not by HTTP post. So i commented that part but still  go through it to understand how the program works
+
+
+
+=======================================================================================
+
+
+
+
+9.
+[HttpGet]
+public IActionResult SearchCategoryWise()
+{
+    return View();
+}
+
+
+
+
+
+[HttpPost]
+public IActionResult SearchCategoryWise(OnlyMC mc)
+{
+    List<NewViewAllAds> mclist = new List<NewViewAllAds>();
+    string data = JsonConvert.SerializeObject(mc);
+    StringContent content = new StringContent(data, Encoding.UTF8, "application/json");
+    HttpResponseMessage response = client.PostAsync(url + "FilterMainCategoryAds", content).Result;
+
+    if (response.IsSuccessStatusCode)
+    {
+        string result = response.Content.ReadAsStringAsync().Result;
+        var listofads = JsonConvert.DeserializeObject<List<NewViewAllAds>>(result); // Deserialize the response to get the created ad
+        return View("SearchCategoryWiseList", listofads);------------------------------>watch this line , see which View you have called and what you have passed
+    }
+    
+    return View();    // fail the if condition and see the result
+    
+}
+
+here i created 2 Views for the same action method one is SearchCategoryWise.cshtml which displays the form and the other is SearchCategoryWiseList.cshtml which displays the list of ads created by List razor page template. when the get action method is called the form is shown( SearchCategoryWise.cshtml) and for the post request the list of ads is shown( SearchCategoryWiseList.cshtml)---->for this you only have to do is pass which View you have to call and what data you have to pass-----> return View("SearchCategoryWiseList", listofads);
+
+
+=========================================================================================
+Drop down list easy format by chatgpt----- just keep it for reference, lets see this later
+
+10. 
+
+
+Step 1: Fetch Main Categories for the Form
+Modify your controller to fetch the list of main categories and pass it to the view. You can use ViewBag or a ViewModel for this purpose. Here, I'll use ViewBag for simplicity.	
+
+Controller Method
+public IActionResult AddNewSubCategories()
+{
+    var mainCategories = context.MainCategories.ToList();
+    ViewBag.MainCategories = mainCategories;
+    return View();
+}
+
+Step 2: Update the View
+Update the view to display a dropdown list for selecting the main category name. Use the ViewBag.MainCategories to populate the dropdown options.
+
+Updated View
+
+@model OnlineAdsManagementSystem.Models.FilteredPropertiesOfSubCategory
+
+@{
+    ViewData["Title"] = "AddNewSubCategories";
+}
+
+<h1>AddNewSubCategories</h1>
+
+<h4>FilteredPropertiesOfSubCategory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddNewSubCategories">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MCName" class="control-label">Main Category Name</label>
+                <select asp-for="MCName" class="form-control" asp-items="@(new SelectList(ViewBag.MainCategories, "Mcname", "Mcname"))"></select>
+                <span asp-validation-for="MCName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scname" class="control-label"></label>
+                <input asp-for="Scname" class="form-control" />
+                <span asp-validation-for="Scname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+Step 3: Handle Form Submission
+In the form submission handler, look up the main category ID based on the selected main category name and then proceed to save the subcategory.
+
+Controller Method for Form Submission
+
+[HttpPost]
+public async Task<IActionResult> AddNewSubCategories(FilteredPropertiesOfSubCategory addNewSubCatg)
+{
+    if (ModelState.IsValid)
+    {
+        // Normalize the main category name to remove spaces and convert to lowercase
+        var normalizedMCName = addNewSubCatg.MCName.Replace(" ", "").ToLower();
+
+        // Find the main category ID based on the normalized main category name
+        var mainCategory = await context.MainCategories
+            .FirstOrDefaultAsync(c => c.Mcname.Replace(" ", "").ToLower() == normalizedMCName);
+
+        if (mainCategory == null)
+        {
+            // If the main category does not exist, return an error
+            TempData["addNewSCError"] = "Main Category does not exist";
+            return View();
+        }
+
+        // Set the main category ID in the subcategory
+        addNewSubCatg.Mcid = mainCategory.Mcid;
+
+        var newSubCategory = new SubCategory
+        {
+            Mcid = addNewSubCatg.Mcid,
+            Scname = addNewSubCatg.Scname
+        };
+
+        await context.SubCategories.AddAsync(newSubCategory);
+        await context.SaveChangesAsync();
+
+        TempData["addNewSCDone"] = "New Sub Category Added Successfully";
+        return RedirectToAction("AddNewSubCategories");
+    }
+
+    TempData["addNewSCError"] = "Error adding new sub category";
+    return View(addNewSubCatg);
+}
+
+
+
+========================================================================================================================
+
+11. no of properties in DTO CLASS and Filtered class should be same
+
+
+
+12. 
+
+ 

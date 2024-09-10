@@ -1,0 +1,124 @@
+﻿@model OnlineAdsManagementSystem.Models.FilteredPropertiesOfSubCategory
+
+@{
+    ViewData["Title"] = "AddNewSubCategories";
+    
+
+    
+    if (TempData["addNewSCDone"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!!</strong> @TempData["addNewSCDone"]
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    if (TempData["addNewSCError"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Sorry!!</strong> @TempData["addNewSCError"] Try adding other Categories
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+}
+
+
+
+
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+    <div class="card bg-dark mt-5" style="width: 30rem; height: auto;">
+        <h1 class="col d-flex justify-content-center m-3 text-white">Add Sub Category</h1>
+
+        <div class=" col d-block justify-content-center border-5 border-dark ">
+
+            <div class="col d-flex justify-content-center m-3 ">
+                <div class="" style="width: 20rem; height:auto">
+
+
+                    <div class="card-body text-white">
+
+                        <form asp-action="AddNewSubCategories">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            @* <div class="form-group">
+                            <label asp-for="MCName" class="control-label">Main Category Name</label>
+                            <input asp-for="MCName" class="form-control" />
+                            <span asp-validation-for="MCName" class="text-danger"></span>
+                            </div> *@
+
+                            <div class="form-group">
+                                <label asp-for="MCName" class="control-label">Main Category</label>
+                                <select asp-for="MCName" class="form-control" id="mainCategory">
+                                    <option value="">Choose MainCategory</option>
+                                    @foreach (var item in ViewBag.MainCategories)
+                                    {
+                                        <option value="@item.Text" data-group="@item.Group.Name">@item.Text</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="MCName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Scname" class="control-label">Enter Sub Category</label>
+                                <input asp-for="Scname" class="form-control" />
+                                <span asp-validation-for="Scname" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Add" class="btn btn-primary" />
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div>
+    <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+       asp-controller="Home" asp-action="AdminDashboard">
+        Back to Dashboard
+    </a>
+</div>
+
+
+
+@* 
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddNewSubCategories">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+
+            <div class="form-group">
+                <label asp-for="MCName" class="control-label"></label>
+                <select asp-for="MCName" class="form-control" id="mainCategory">
+                    <option value="">Choose MainCategory</option>
+                    @foreach (var item in ViewBag.MainCategories)
+                    {
+                        <option value="@item.Text" data-group="@item.Group.Name">@item.Text</option>
+                    }
+                </select>
+                <span asp-validation-for="MCName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scname" class="control-label"></label>
+                <input asp-for="Scname" class="form-control" />
+                <span asp-validation-for="Scname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="AdminDashboard">Back to List</a>
+</div>
+ *@

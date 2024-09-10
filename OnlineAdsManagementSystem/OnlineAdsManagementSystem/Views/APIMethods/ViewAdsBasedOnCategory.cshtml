@@ -1,0 +1,83 @@
+﻿@model IEnumerable<OnlineAdsManagementSystem.Models.NewViewAllAds>
+
+@{
+    ViewData["Title"] = "ViewAdsBasedOnCategory";
+}
+
+<h1>ViewAdsBasedOnCategory</h1>
+
+@* <p>
+    <a asp-action="Create">Create New</a>
+</p> *@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.userId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mCname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sCname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.contactName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.contactEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.userId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mCname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sCname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.adDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contactName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.contactEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @* <a asp-action="Edit" asp-route-id="@item.adId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.adId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.adId">Delete</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

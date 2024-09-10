@@ -1,0 +1,182 @@
+@model OnlineAdsManagementSystem.Models.User
+
+@{
+    ViewData["Title"] = "Register";
+}
+@{
+    if (TempData["UserExists"]!=null)
+    {   
+        
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Sorry</strong> @TempData["UserExists"]
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+    }
+}
+
+
+<div class="col d-flex justify-content-center m-3 ">
+    <div class="card bg-dark mt-5" style="width: 38rem; height:auto ;">
+        <br />
+        <h1 class="text-white col d-flex justify-content-center">Registration Form</h1>
+
+        <div class="card-body">
+
+
+            <div class="row text-white d-flex justify-content-center">
+                <div class="col-md-6">
+                    @{
+                        if (TempData["Success"] != null)
+                        {
+                            <h5 style="color:limegreen">Registration Successful </h5>
+                            <h5 style="color:limegreen">Your newly generated id is: @TempData["NewUserId"]</h5>
+                        }
+                        if (TempData["ValidationError"] != null)
+                        {
+                            <h2 style="color:limegreen">@TempData["ValidationError"] </h2>
+                        }
+
+
+                    }
+                    <form asp-action="Register">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="FullName" class="control-label"></label>
+                            <input asp-for="FullName" class="form-control" />
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Dob" class="control-label"></label>
+                            <input asp-for="Dob" class="form-control" />
+                            <span asp-validation-for="Dob" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Gender" class="control-label"></label>
+                            <input asp-for="Gender" class="form-control" />
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="EmailId" class="control-label"></label>
+                            <input asp-for="EmailId" class="form-control" />
+                            <span asp-validation-for="EmailId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="City" class="control-label"></label>
+                            <input asp-for="City" class="form-control" />
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="State" class="control-label"></label>
+                            <input asp-for="State" class="form-control" />
+                            <span asp-validation-for="State" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PhoneNo" class="control-label"></label>
+                            <input asp-for="PhoneNo" class="form-control" />
+                            <span asp-validation-for="PhoneNo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Register" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div>
+    <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+       asp-controller="Home" asp-action="Login">
+        Login
+    </a>
+</div>
+
+
+
+@* <div class="row">
+    <div class="col-md-4">
+        @{
+            if (TempData["Success"] != null)
+            {
+                <h2 style="color:limegreen">Registration Successful </h2>
+                <h2 style ="color:limegreen">Your newly generated id is: @TempData["NewUserId"]</h2>
+            }
+            if (TempData["ValidationError"] != null)
+            {
+                <h2 style="color:limegreen">@TempData["ValidationError"] </h2>
+            }
+            
+
+        }
+        <form asp-action="Register">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dob" class="control-label"></label>
+                <input asp-for="Dob" class="form-control" />
+                <span asp-validation-for="Dob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailId" class="control-label"></label>
+                <input asp-for="EmailId" class="form-control" />
+                <span asp-validation-for="EmailId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNo" class="control-label"></label>
+                <input asp-for="PhoneNo" class="form-control" />
+                <span asp-validation-for="PhoneNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control"  />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+    <br />
+    <a asp-action="Login">Login</a>
+</div>
+ *@
+

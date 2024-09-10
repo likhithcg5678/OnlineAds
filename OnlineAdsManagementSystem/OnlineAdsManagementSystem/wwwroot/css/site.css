@@ -1,0 +1,74 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    
+    
+}
+
+.text{
+    color:yellow;
+}
+.textboxdata{
+    color:white;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through to the form */
+}
+
+.throwing-image {
+    position: absolute;
+    width: 150px; /* Medium image size */
+    height: 150px;
+    opacity: 0;
+    z-index: 9999; /* Ensure images appear above other content */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+
+/*.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}*/
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make the form grow with content */
+    width: 350px; /* Fixed width for layout consistency */
+    min-height: 480px; /* Ensure initial height */
+    background-color: midnightblue;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+
+.form-group {
+    margin-bottom: 1rem; /* Consistent spacing between elements */
+}
+
+.text-danger {
+    margin-top: 0.5rem; /* Space above validation messages */
+}
+

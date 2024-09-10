@@ -1,0 +1,88 @@
+﻿@model OnlineAdsManagementSystem.Models.FilteredPropertiesOfMainCategory
+
+@{
+    ViewData["Title"] = "EditMainCategories";
+}
+
+
+
+
+
+<div class="col d-flex justify-content-center m-3 ">
+    <div class="card bg-dark mt-5" style="width: 38rem; height:auto ;">
+        <br />
+        <h1 class="text-white col d-flex justify-content-center">Edit Main Category </h1>
+
+        <div class="card-body text-white">
+
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <form asp-action="EditMainCategories">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="mcid" />
+                        <div class="form-group">
+                            <label asp-for="mcid" class="control-label">Main Category ID</label>
+                            <input asp-for="mcid" class="form-control" readonly />
+                            <span asp-validation-for="mcid" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="mcname" class="control-label">Main Category Name</label>
+                            <input asp-for="mcname" class="form-control" />
+                            <span asp-validation-for="mcname" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<div>
+    <a style="display: inline-block; padding: 10px 20px; background-color: #ff3333; color: white; text-decoration: none;
+              text-shadow: 2px 2px 2px black; font-weight: 800; border-radius: 8px; text-align: center;"
+       asp-controller="Home" asp-action="AdminDashboard">
+        Back to Dashboard
+    </a>
+</div>
+
+
+
+@* 
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditMainCategories">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="mcid" />
+            <div class="form-group">
+                <label asp-for="mcid" class="control-label"></label>
+                <input asp-for="mcid" class="form-control" readonly/>
+                <span asp-validation-for="mcid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mcname" class="control-label"></label>
+                <input asp-for="mcname" class="form-control" />
+                <span asp-validation-for="mcname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+ *@
